@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Наша свадьба | Элегантное приглашение</title>
+  <!-- Google Fonts для изящных шрифтов -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #CBC4BD;
+      font-family: 'Montserrat', sans-serif;
+      color: #5E534E;
+      line-height: 1.4;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --color-light: #CBC4BD;
+      --color-medium: #9F938C;
+      --color-dark: #5E534E;
+      --color-extra-light: #DDD4CD;
+      --color-white-soft: #F5F0EA;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 80px 0;
+      border-bottom: 1px solid rgba(94, 83, 78, 0.12);
+    }
+    section:last-child {
+      border-bottom: none;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: var(--color-dark);
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+      color: var(--color-dark);
+    }
+    h2:after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 2px;
+      background: var(--color-medium);
+      border-radius: 4px;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .section-title h2 {
+      margin-bottom: 0;
+    }
+    .section-title p {
+      margin-top: 24px;
+      font-size: 1.1rem;
+      color: var(--color-dark);
+      opacity: 0.75;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, #CBC4BD 0%, #DDD4CD 100%);
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+      filter: brightness(0.96) sepia(0.08) contrast(1.05);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      background: rgba(203, 196, 189, 0.85);
+      backdrop-filter: blur(6px);
+      padding: 2rem 3rem;
+      border-radius: 32px;
+      box-shadow: 0 20px 35px rgba(94, 83, 78, 0.15);
+      max-width: 85%;
+      border: 1px solid rgba(159, 147, 140, 0.3);
+    }
+    .guest-name-highlight {
+      font-size: 1.8rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      color: var(--color-dark);
+      background: rgba(255,255,240,0.3);
+      display: inline-block;
+      padding: 0 12px;
+      border-radius: 40px;
+      margin-top: 8px;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-dark);
+      opacity: 0.85;
+      margin-bottom: 0.5rem;
+    }
+    .hero-date {
+      font-size: 1.6rem;
+      font-family: 'Cormorant Garamond', serif;
+      margin-top: 1rem;
+      border-top: 1px solid var(--color-medium);
+      display: inline-block;
+      padding-top: 0.8rem;
+      color: var(--color-dark);
+    }
+    .btn-scroll {
+      margin-top: 2rem;
+      display: inline-block;
+      background: none;
+      border: 1px solid var(--color-dark);
+      padding: 10px 28px;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--color-dark);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn-scroll:hover {
+      background: var(--color-dark);
+      border-color: var(--color-dark);
+      color: #CBC4BD;
+    }
+
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .gallery-item {
+      flex: 1 1 280px;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 12px 24px -12px rgba(94, 83, 78, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s;
+      background: #F5F0EA;
+    }
+    .gallery-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px -12px rgba(94, 83, 78, 0.3);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+    .img-caption {
+      padding: 16px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--color-dark);
+      background: #F5F0EA;
+      font-weight: 500;
+      border-top: 1px solid rgba(159, 147, 140, 0.3);
+    }
+
+    .info-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .card {
+      background: #F5F0EA;
+      border-radius: 40px;
+      padding: 32px 28px;
+      flex: 1 1 280px;
+      text-align: center;
+      box-shadow: 0 8px 18px rgba(94, 83, 78, 0.06);
+      transition: all 0.2s;
+      border: 1px solid rgba(159, 147, 140, 0.4);
+    }
+    .card i {
+      font-size: 2.4rem;
+      color: var(--color-dark);
+      margin-bottom: 18px;
+      opacity: 0.85;
+    }
+    .card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+      color: var(--color-dark);
+    }
+    .card p {
+      color: var(--color-dark);
+      opacity: 0.8;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+    .address-link {
+      display: inline-block;
+      margin-top: 12px;
+      color: var(--color-dark);
+      text-decoration: none;
+      border-bottom: 1px dashed var(--color-medium);
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .address-link:hover {
+      color: var(--color-medium);
+    }
+
+    .timeline {
+      max-width: 650px;
+      margin: 30px auto 0;
+      background: #F5F0EA;
+      border-radius: 48px;
+      padding: 24px 32px;
+      box-shadow: 0 8px 18px rgba(94, 83, 78, 0.06);
+      border: 1px solid rgba(159, 147, 140, 0.25);
+    }
+    .timeline-item {
+      display: flex;
+      align-items: baseline;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(159, 147, 140, 0.3);
+    }
+    .timeline-item:last-child {
+      border-bottom: none;
+    }
+    .timeline-time {
+      font-weight: 600;
+      width: 110px;
+      font-size: 1.1rem;
+      color: var(--color-dark);
+      font-weight: 500;
+    }
+    .timeline-desc {
+      flex: 1;
+      font-weight: 500;
+      color: var(--color-dark);
+    }
+    .timeline-desc span {
+      font-weight: 400;
+      opacity: 0.75;
+      display: block;
+      font-size: 0.9rem;
+    }
+
+    .dresscode {
+      background: #F5F0EA;
+      border-radius: 48px;
+      padding: 40px 28px;
+      text-align: center;
+      max-width: 700px;
+      margin: 30px auto 0;
+      border: 1px solid rgba(159, 147, 140, 0.3);
+    }
+    .dresscode i {
+      font-size: 2.5rem;
+      color: var(--color-dark);
+      opacity: 0.8;
+    }
+    .dresscode h3 {
+      margin: 12px 0 6px;
+      color: var(--color-dark);
+    }
+
+    .rsvp-form {
+      background: #F5F0EA;
+      border-radius: 48px;
+      padding: 40px 32px;
+      max-width: 750px;
+      margin: 30px auto 0;
+      box-shadow: 0 10px 25px rgba(94, 83, 78, 0.05);
+      border: 1px solid rgba(159, 147, 140, 0.35);
+    }
+    .form-group {
+      margin-bottom: 24px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid rgba(159, 147, 140, 0.6);
+      border-radius: 60px;
+      font-family: 'Montserrat', sans-serif;
+      background: #FFFCF9;
+      font-size: 0.95rem;
+      transition: 0.2s;
+      color: var(--color-dark);
+    }
+    textarea {
+      border-radius: 24px;
+      resize: vertical;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--color-dark);
+      box-shadow: 0 0 0 3px rgba(94, 83, 78, 0.15);
+    }
+    .btn-submit {
+      background: var(--color-dark);
+      border: none;
+      padding: 14px 30px;
+      border-radius: 60px;
+      color: #CBC4BD;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+      width: 100%;
+      font-family: inherit;
+    }
+    .btn-submit:hover {
+      background: #9F938C;
+      color: #2F2A26;
+      transform: scale(0.98);
+    }
+    .rsvp-note {
+      text-align: center;
+      font-size: 0.8rem;
+      margin-top: 16px;
+      color: var(--color-dark);
+      opacity: 0.7;
+    }
+
+    .personal-message {
+      background: rgba(159, 147, 140, 0.15);
+      border-radius: 32px;
+      padding: 24px 32px;
+      margin: 30px auto 0;
+      max-width: 700px;
+      text-align: center;
+      border-left: 3px solid var(--color-dark);
+    }
+
+    footer {
+      background: #DDD4CD;
+      padding: 40px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--color-dark);
+      border-top: 1px solid rgba(94, 83, 78, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2.6rem; }
+      h2 { font-size: 2.2rem; }
+      .hero-content { padding: 1.5rem; width: 90%; }
+      section { padding: 60px 0; }
+      .timeline-item { flex-direction: column; }
+      .timeline-time { margin-bottom: 8px; width: auto; }
+      .guest-name-highlight { font-size: 1.3rem; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .gallery-item img { height: 240px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ГЕРОЙ С ФОТО -->
+<div class="hero">
+  <img class="hero-bg" src="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="свадебная атмосфера" loading="lazy">
+  <div class="hero-content">
+    <p>С любовью приглашаем вас</p>
+    <h1>Анна & Дмитрий</h1>
+    <!-- Здесь будет динамически подставлено имя гостя -->
+    <div id="guestNameDisplay" class="guest-name-highlight"></div>
+    <div class="hero-date">
+      <i class="fas fa-calendar-alt" style="margin-right: 8px;"></i> 28 июня 2025 · 16:00
+    </div>
+    <a href="#about" class="btn-scroll"><i class="fas fa-arrow-down"></i> Открыть приглашение</a>
+  </div>
+</div>
+
+<main>
+  <!-- секция: Фотографии и история -->
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>Наша история любви</h2>
+        <p id="storyGreeting">Две судьбы, которые переплелись в один прекрасный день, чтобы стать единым целым.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=600" alt="пара в парке" loading="lazy">
+          <div class="img-caption">✨ Знакомство в осеннем парке, 2021</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/2253845/pexels-photo-2253845.jpeg?auto=compress&cs=tinysrgb&w=600" alt="предложение руки и сердца" loading="lazy">
+          <div class="img-caption">💍 Волшебное «Да», закат на озере</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/2711040/pexels-photo-2711040.jpeg?auto=compress&cs=tinysrgb&w=600" alt="прогулка вдвоем" loading="lazy">
+          <div class="img-caption">🌿 Совместные путешествия и счастье</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/2738356/pexels-photo-2738356.jpeg?auto=compress&cs=tinysrgb&w=600" alt="цветы и нежность" loading="lazy">
+          <div class="img-caption">🌸 Любовь в мелочах, 2024</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- секция: Детали мероприятия -->
+  <section id="details">
+    <div class="container">
+      <div class="section-title">
+        <h2>День торжества</h2>
+        <p>Присоединяйтесь к нам, чтобы разделить этот незабываемый день</p>
+      </div>
+      <div class="info-cards">
+        <div class="card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Локация</h3>
+          <p>Усадьба «Березовая роща»</p>
+          <p>Московская область, д. Сокольники, ул. Цветочная, 12</p>
+          <a href="https://maps.app.goo.gl/example" target="_blank" class="address-link"><i class="fas fa-directions"></i> Открыть карту</a>
+        </div>
+        <div class="card">
+          <i class="far fa-clock"></i>
+          <h3>Время</h3>
+          <p>Сбор гостей: 15:30</p>
+          <p>Церемония: 16:00</p>
+          <p>Банкет до 23:00</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-glass-cheers"></i>
+          <h3>Дресс-код</h3>
+          <p>Элегантный / Neutrals & Earthy</p>
+          <p>Оттенки бежевого, серого, кофе с молоком, благородные тона</p>
+          <i class="fas fa-tshirt" style="font-size:1.2rem; margin-top:6px; display:inline-block;"></i>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <h3 style="text-align:center; font-family: 'Cormorant Garamond'; font-size: 1.8rem; margin-bottom: 12px; color: var(--color-dark);">Программа дня</h3>
+        <div class="timeline-item">
+          <div class="timeline-time">15:30 – 16:00</div>
+          <div class="timeline-desc">Встреча гостей, welcome-фуршет <span>легкие закуски, просекко</span></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">16:00 – 16:45</div>
+          <div class="timeline-desc">Торжественная церемония <span>на открытой веранде в окружении сада</span></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">17:00 – 18:30</div>
+          <div class="timeline-desc">Фотопрогулка и коктейльный час <span>живая музыка, фуршет</span></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">18:30 – 23:00</div>
+          <div class="timeline-desc">Свадебный ужин, танцы и сюрпризы <span>праздничное застолье, шоу-программа</span></div>
+        </div>
+      </div>
+
+      <div class="dresscode">
+        <i class="fas fa-feather-alt"></i>
+        <h3>Благородная элегантность</h3>
+        <p>Пожалуйста, поддержите изысканную цветовую гамму нашей свадьбы: оттенки слоновой кости, какао, пепельного розового, тепло-серые и бежевые тона. <br> Вдохновение — природная утонченность.</p>
+        <p style="margin-top: 12px;"><i class="fas fa-umbrella-beach"></i> Обувь на низком ходу — территория усадьбы с газонами</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- секция: Галерея дополнительных фото -->
+  <section style="background: #DED6CF;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Вдохновение моментом</h2>
+        <p>Атмосфера, которая будет окружать нас в этот день</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=600" alt="свадебный торт" loading="lazy">
+          <div class="img-caption">🎂 Десертный стол от шеф-кондитера</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/1307679/pexels-photo-1307679.jpeg?auto=compress&cs=tinysrgb&w=600" alt="цветочная арка" loading="lazy">
+          <div class="img-caption">🌾 Церемониальная арка из сухоцветов и пионов</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/1151418/pexels-photo-1151418.jpeg?auto=compress&cs=tinysrgb&w=600" alt="музыканты" loading="lazy">
+          <div class="img-caption">🎻 Струнный квартет в течение вечера</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Блок с персональным сообщением (парсится из параметра message) -->
+  <section id="personalMessageSection" style="display: none;">
+    <div class="container">
+      <div class="personal-message" id="personalMessageBox">
+        <i class="fas fa-envelope-open-text" style="font-size: 1.8rem; margin-bottom: 12px; opacity: 0.7;"></i>
+        <p id="personalMessageText" style="font-size: 1.05rem; font-style: italic;"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP форма -->
+  <section id="rsvp">
+    <div class="container">
+      <div class="section-title">
+        <h2>Подтвердите присутствие</h2>
+        <p id="rsvpInviteText">Пожалуйста, дайте ответ до 20 мая 2025, чтобы мы могли учесть все детали</p>
+      </div>
+      <div class="rsvp-form">
+        <form id="rsvpForm">
+          <div class="form-group">
+            <input type="text" id="name" placeholder="Ваше имя и фамилия *" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Email (для отправки напоминания)">
+          </div>
+          <div class="form-group">
+            <select id="attendance" required>
+              <option value="" disabled selected>Буду ли я на свадьбе? *</option>
+              <option value="yes">С радостью приду!</option>
+              <option value="no">К сожалению, не смогу</option>
+              <option value="plus">Приду с партнером/партнёршей</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea rows="2" id="guestMessage" placeholder="Ваши пожелания, вопросы или диетические предпочтения"></textarea>
+          </div>
+          <button type="submit" class="btn-submit"><i class="fas fa-envelope"></i> Отправить RSVP</button>
+          <div class="rsvp-note">* Поля обязательные. Мы свяжемся для уточнения деталей.</div>
+        </form>
+        <div id="formStatus" style="margin-top: 20px; text-align:center; font-size:0.9rem; color:#5E534E;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- дополнительная секция с тёплыми словами -->
+  <section style="background: #CBC4BD; padding: 40px 0;">
+    <div class="container" style="text-align: center;">
+      <i class="fas fa-heart" style="font-size: 2rem; color: var(--color-dark); opacity: 0.6;"></i>
+      <p style="max-width: 650px; margin: 20px auto 0; font-size: 1.1rem; font-style: italic; color: var(--color-dark);">"Любовь — это когда хочешь прожить всю жизнь с кем-то, кто каждый день делает твое сердце чуточку полнее." <br> С нетерпением ждём вас, чтобы разделить нашу радость!</p>
+      <p style="margin-top: 24px; font-weight: 500;">Анна & Дмитрий</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p><i class="far fa-copyright"></i> 2025 | Свадьба Анны и Дмитрия | Элегантность в каждой детали</p>
+    <p style="margin-top: 8px; font-size: 0.75rem;">Благодарим, что будете с нами в этот важный день</p>
+  </div>
+</footer>
+
+<script>
+  // ===================== ПАРСИНГ ПАРАМЕТРОВ ИЗ URL =====================
+  function getUrlParameters() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+      name: params.get('name'),      // параметр ?name=ИмяГостя
+      message: params.get('message'), // параметр ?message=Текст
+      guest: params.get('guest'),     // дополнительный параметр (можно использовать)
+      // можно добавить любые другие параметры
+    };
+  }
+
+  function decodeHTMLEntities(str) {
+    if (!str) return str;
+    const textarea = document.createElement('textarea');
+    textarea.innerHTML = str;
+    return textarea.value;
+  }
+
+  // Функция для применения параметров на странице
+  function applyGuestParameters() {
+    const params = getUrlParameters();
+    
+    // 1. Обработка имени гостя (параметр name)
+    let guestName = params.name;
+    if (guestName) {
+      // Декодируем на случай %20 и прочих спецсимволов
+      guestName = decodeURIComponent(guestName);
+      guestName = decodeHTMLEntities(guestName);
+      
+      // Отображаем имя в hero-блоке
+      const nameDisplay = document.getElementById('guestNameDisplay');
+      if (nameDisplay) {
+        nameDisplay.innerHTML = `<i class="fas fa-star-of-life" style="font-size: 0.9rem;"></i> ${guestName} <i class="fas fa-star-of-life" style="font-size: 0.9rem;"></i>`;
+      }
+      
+      // Персонализируем приветствие в секции "Наша история любви"
+      const storyGreeting = document.getElementById('storyGreeting');
+      if (storyGreeting) {
+        storyGreeting.innerHTML = `Дорогой(ая) ${guestName}, мы рады, что вы станете частью нашей истории. Две судьбы, которые переплелись, чтобы стать единым целым.`;
+      }
+      
+      // Персонализируем текст в RSVP секции
+      const rsvpText = document.getElementById('rsvpInviteText');
+      if (rsvpText) {
+        rsvpText.innerHTML = `${guestName}, пожалуйста, дайте ответ до 20 мая 2025, чтобы мы могли учесть все детали.`;
+      }
+      
+      // Предзаполняем поле имени в форме RSVP (для удобства)
+      const nameInput = document.getElementById('name');
+      if (nameInput) {
+        nameInput.value = guestName;
+      }
+    } else {
+      // Если имени нет, показываем стандартное приветствие
+      const nameDisplay = document.getElementById('guestNameDisplay');
+      if (nameDisplay) {
+        nameDisplay.style.display = 'none';
+      }
+    }
+    
+    // 2. Обработка персонального сообщения (параметр message)
+    let personalMessage = params.message;
+    if (personalMessage) {
+      personalMessage = decodeURIComponent(personalMessage);
+      personalMessage = decodeHTMLEntities(personalMessage);
+      
+      const messageSection = document.getElementById('personalMessageSection');
+      const messageText = document.getElementById('personalMessageText');
+      
+      if (messageSection && messageText && personalMessage.trim() !== '') {
+        messageText.innerHTML = `«${personalMessage}»`;
+        messageSection.style.display = 'block';
+      }
+    }
+    
+    // 3. Дополнительный параметр guest (количество гостей или что-то еще)
+    //    Можно использовать для отображения дополнительной информации
+    const guestCount = params.guest;
+    if (guestCount) {
+      const decodedGuest = decodeURIComponent(guestCount);
+      // Пример: если нужно показать количество приглашенных гостей
+      // Создадим небольшой блок или добавим куда-то
+      const dresscodeBlock = document.querySelector('.dresscode');
+      if (dresscodeBlock && decodedGuest && !document.getElementById('guestCountBadge')) {
+        const badge = document.createElement('div');
+        badge.id = 'guestCountBadge';
+        badge.style.marginTop = '16px';
+        badge.style.fontSize = '0.9rem';
+        badge.style.fontWeight = '500';
+        badge.style.background = 'rgba(94, 83, 78, 0.1)';
+        badge.style.padding = '8px 16px';
+        badge.style.borderRadius = '40px';
+        badge.style.display = 'inline-block';
+        badge.innerHTML = `<i class="fas fa-users"></i> Приглашено: ${decodedGuest} ${decodedGuest === '1' ? 'гость' : (decodedGuest < 5 ? 'гостя' : 'гостей')}`;
+        dresscodeBlock.appendChild(badge);
+      }
+    }
+  }
+
+  // Запускаем применение параметров при загрузке страницы
+  applyGuestParameters();
+
+  // ===================== RSVP FORM HANDLER =====================
+  const rsvpForm = document.getElementById('rsvpForm');
+  const statusDiv = document.getElementById('formStatus');
+
+  if (rsvpForm) {
+    rsvpForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nameInput = document.getElementById('name');
+      const attendanceSelect = document.getElementById('attendance');
+      const name = nameInput.value.trim();
+      const attendance = attendanceSelect.value;
+
+      if (!name) {
+        statusDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> Пожалуйста, укажите ваше имя.';
+        statusDiv.style.color = '#5E534E';
+        return;
+      }
+      if (!attendance) {
+        statusDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> Выберите вариант присутствия.';
+        statusDiv.style.color = '#5E534E';
+        return;
+      }
+
+      statusDiv.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Отправляем ваше подтверждение...';
+      setTimeout(() => {
+        let answerText = '';
+        if (attendance === 'yes') answerText = 'будете на свадьбе! 🥂';
+        else if (attendance === 'no') answerText = 'не сможете присутствовать, мы будем скучать 💌';
+        else answerText = 'придёте с партнёром/партнёршей! 💑';
+        statusDiv.innerHTML = `<i class="fas fa-check-circle"></i> Спасибо, ${name}! Вы ${answerText} Мы свяжемся с вами в ближайшее время.`;
+        statusDiv.style.color = '#5E534E';
+        rsvpForm.reset();
+        
+        // Если имя было из параметра, восстанавливаем его в поле после сброса
+        const params = getUrlParameters();
+        if (params.name) {
+          const restoredName = decodeURIComponent(params.name);
+          document.getElementById('name').value = restoredName;
+        }
+        
+        setTimeout(() => {
+          statusDiv.innerHTML = '';
+        }, 6000);
+      }, 800);
+    });
+  }
+
+  // Плавный скролл к якорям
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === "#" || href === "") return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
