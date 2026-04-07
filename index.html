@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Наша свадьба | Приглашение</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <!-- Font Awesome 6 -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
@@ -16,7 +17,6 @@
     }
 
     body {
-      /* Оригинальные пастельные цвета */
       background-color: #fefaf5;
       font-family: 'Montserrat', sans-serif;
       color: #4a3b2c;
@@ -24,7 +24,6 @@
       scroll-behavior: smooth;
     }
 
-    /* пастельная палитра (первая версия) */
     :root {
       --blush: #f5e3e0;
       --sage: #e1e8db;
@@ -43,13 +42,16 @@
 
     section {
       padding: 80px 0;
-      border-bottom: 1px solid rgba(0,0,0,0.05);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
+
     section:last-child {
       border-bottom: none;
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 500;
       letter-spacing: 1px;
@@ -67,6 +69,7 @@
       position: relative;
       display: inline-block;
     }
+
     h2:after {
       content: '';
       position: absolute;
@@ -78,13 +81,16 @@
       background: var(--rose);
       border-radius: 4px;
     }
+
     .section-title {
       text-align: center;
       margin-bottom: 48px;
     }
+
     .section-title h2 {
       margin-bottom: 0;
     }
+
     .section-title p {
       margin-top: 24px;
       font-size: 1.1rem;
@@ -105,17 +111,19 @@
       background: linear-gradient(145deg, #fff5ef, #faece4);
       overflow: hidden;
     }
+
     .hero-bg {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit:cover;
-      opacity: 0.5;
+      object-fit: cover;
+      opacity: 0.4;
       filter: brightness(0.98) sepia(0.1);
       z-index: 0;
     }
+
     .hero-content {
       position: relative;
       z-index: 2;
@@ -123,9 +131,10 @@
       backdrop-filter: blur(3px);
       padding: 2rem 3rem;
       border-radius: 32px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
       max-width: 85%;
     }
+
     .hero-content p {
       font-size: 1.2rem;
       letter-spacing: 2px;
@@ -133,17 +142,19 @@
       color: #b48c6c;
       margin-bottom: 0.5rem;
     }
+
     .guest-name-highlight {
       font-size: 1.8rem;
       font-family: 'Cormorant Garamond', serif;
       font-weight: 600;
       color: #b48c6c;
-      background: rgba(255,240,230,0.6);
+      background: rgba(255, 240, 230, 0.6);
       display: inline-block;
       padding: 0 12px;
       border-radius: 40px;
       margin-top: 8px;
     }
+
     .hero-date {
       font-size: 1.6rem;
       font-family: 'Cormorant Garamond', serif;
@@ -152,6 +163,7 @@
       display: inline-block;
       padding-top: 0.8rem;
     }
+
     .btn-scroll {
       margin-top: 2rem;
       display: inline-block;
@@ -165,6 +177,7 @@
       text-decoration: none;
       transition: all 0.3s ease;
     }
+
     .btn-scroll:hover {
       background: var(--rose);
       border-color: var(--rose);
@@ -178,23 +191,27 @@
       justify-content: center;
       margin-top: 20px;
     }
+
     .gallery-item {
       flex: 1 1 280px;
       border-radius: 28px;
       overflow: hidden;
-      box-shadow: 0 12px 24px -12px rgba(0,0,0,0.15);
+      box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.15);
       transition: transform 0.3s ease;
       background: white;
     }
+
     .gallery-item:hover {
       transform: translateY(-8px);
     }
+
     .gallery-item img {
       width: 100%;
       height: 300px;
       object-fit: cover;
       display: block;
     }
+
     .img-caption {
       padding: 16px;
       text-align: center;
@@ -211,30 +228,34 @@
       justify-content: center;
       margin-top: 20px;
     }
+
     .card {
       background: white;
       border-radius: 40px;
       padding: 32px 28px;
       flex: 1 1 280px;
       text-align: center;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.03);
-      transition: all 0.2s;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
       border: 1px solid #f3e2db;
     }
+
     .card i {
       font-size: 2.4rem;
       color: var(--rose);
       margin-bottom: 18px;
     }
+
     .card h3 {
       font-size: 1.6rem;
       margin-bottom: 12px;
     }
+
     .card p {
       color: #7c6958;
       margin-bottom: 8px;
       font-size: 1rem;
     }
+
     .address-link {
       display: inline-block;
       margin-top: 12px;
@@ -249,27 +270,32 @@
       background: #fffbf8;
       border-radius: 48px;
       padding: 24px 32px;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.02);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.02);
     }
+
     .timeline-item {
       display: flex;
       align-items: baseline;
       padding: 18px 0;
       border-bottom: 1px solid #f3e0d8;
     }
+
     .timeline-item:last-child {
       border-bottom: none;
     }
+
     .timeline-time {
       font-weight: 600;
-      width: 110px;
+      width: 100px;
       font-size: 1.1rem;
       color: #b28b6f;
     }
+
     .timeline-desc {
       flex: 1;
       font-weight: 500;
     }
+
     .timeline-desc span {
       font-weight: 400;
       color: #8a7562;
@@ -285,6 +311,7 @@
       max-width: 700px;
       margin: 30px auto 0;
     }
+
     .dresscode i {
       font-size: 2.5rem;
       color: var(--rose);
@@ -296,13 +323,17 @@
       padding: 40px 32px;
       max-width: 750px;
       margin: 30px auto 0;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.02);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
       border: 1px solid #f2e2db;
     }
+
     .form-group {
       margin-bottom: 24px;
     }
-    input, select, textarea {
+
+    input,
+    select,
+    textarea {
       width: 100%;
       padding: 14px 18px;
       border: 1px solid #e6d5ce;
@@ -312,15 +343,20 @@
       font-size: 0.95rem;
       transition: 0.2s;
     }
+
     textarea {
       border-radius: 24px;
       resize: vertical;
     }
-    input:focus, select:focus, textarea:focus {
+
+    input:focus,
+    select:focus,
+    textarea:focus {
       outline: none;
       border-color: var(--rose);
       box-shadow: 0 0 0 3px rgba(219, 183, 176, 0.2);
     }
+
     .btn-submit {
       background: var(--rose);
       border: none;
@@ -334,10 +370,18 @@
       width: 100%;
       font-family: inherit;
     }
+
     .btn-submit:hover {
       background: #c29a91;
       transform: scale(0.98);
     }
+
+    .btn-submit:disabled {
+      background: #d4b9b2;
+      cursor: not-allowed;
+      transform: none;
+    }
+
     .rsvp-note {
       text-align: center;
       font-size: 0.8rem;
@@ -364,357 +408,367 @@
     }
 
     @media (max-width: 768px) {
-      h1 { font-size: 2.6rem; }
-      h2 { font-size: 2.2rem; }
-      .hero-content { padding: 1.5rem; width: 90%; }
-      section { padding: 60px 0; }
-      .timeline-item { flex-direction: column; }
-      .timeline-time { margin-bottom: 8px; width: auto; }
-      .guest-name-highlight { font-size: 1.3rem; }
+      h1 {
+        font-size: 2.6rem;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+      }
+
+      .hero-content {
+        padding: 1.5rem;
+        width: 90%;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .timeline-item {
+        flex-direction: column;
+      }
+
+      .timeline-time {
+        margin-bottom: 8px;
+        width: auto;
+      }
+
+      .guest-name-highlight {
+        font-size: 1.3rem;
+      }
     }
+
     @media (max-width: 480px) {
-      .container { padding: 0 16px; }
-      .gallery-item img { height: 240px; }
+      .container {
+        padding: 0 16px;
+      }
+
+      .gallery-item img {
+        height: 240px;
+      }
     }
   </style>
 </head>
+
 <body>
-
-<div class="hero">
-  <img class="hero-bg" src="./assets/photos/IMG_2735.JPG" alt="свадебная атмосфера" loading="lazy">
-  <div class="hero-content">
-    <p>С любовью приглашаем вас</p>
-    <h1>Анна & Дмитрий</h1>
-    <div id="guestNameDisplay" class="guest-name-highlight"></div>
-    <div class="hero-date">
-      <i class="fas fa-calendar-alt" style="margin-right: 8px;"></i> 28 июня 2025 · 16:00
-    </div>
-    <a href="#about" class="btn-scroll"><i class="fas fa-arrow-down"></i> Открыть приглашение</a>
-  </div>
-</div>
-
-<main>
-  <section id="about">
-    <div class="container">
-      <div class="section-title">
-        <h2>Наша история любви</h2>
-        <p id="storyGreeting">Две судьбы, которые переплелись в один прекрасный день, чтобы стать единым целым.</p>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="" alt="пара в парке" loading="lazy">
-          <div class="img-caption">🏐 Первая встреча</div>
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/photos/букет.jpg" alt="прогулка вдвоем" loading="lazy">
-          <div class="img-caption">🌿 Первые намёки</div>
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/photos/путешествие.jpg" alt="предложение руки и сердца" loading="lazy">
-          <div class="img-caption">✈️ Первое путешествие</div>
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/photos/мы.jpg" alt="цветы и нежность" loading="lazy">
-          <div class="img-caption">🌸 Любовь в мелочах, 2024</div>
-        </div>
-        <div class="gallery-item">
-          <img src="" alt="цветы и нежность" loading="lazy">
-          <div class="img-caption">🌸 Любовь в мелочах, 2024</div>
-        </div>
-        <div class="gallery-item">
-          <img src="" alt="цветы и нежность" loading="lazy">
-          <div class="img-caption">🌸 Любовь в мелочах, 2024</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="details">
-    <div class="container">
-      <div class="section-title">
-        <h2>День торжества</h2>
-        <p>Присоединяйтесь к нам, чтобы разделить этот незабываемый день</p>
-      </div>
-      <div class="info-cards">
-        <div class="card">
-          <i class="fas fa-map-marker-alt"></i>
-          <h3>Локация</h3>
-          <p>Ресторан "Reka"</p>
-          <p>​Отель Hilton Garden Inn Ufa Riverside. ​Улица Аксакова, 4</p>
-          <a href="https://yandex.ru/maps/-/CPfcQEjQ" target="_blank" class="address-link"><i class="fas fa-directions"></i> Открыть карту</a>
-        </div>
-        <div class="card">
-          <i class="far fa-clock"></i>
-          <h3>Время</h3>
-          <p>Сбор гостей: 15:30</p>
-          <p>Церемония: 16:00</p>
-          <p>Банкет до 23:00</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-glass-cheers"></i>
-          <h3>Дресс-код</h3>
-          <p>Элегантный / Pastel tones</p>
-          <p>Пастельные оттенки, цветочные акценты приветствуются</p>
-          <i class="fas fa-tshirt" style="font-size:1.2rem; margin-top:6px; display:inline-block;"></i>
-        </div>
-      </div>
-
-      <div class="timeline">
-        <h3 style="text-align:center; font-family: 'Cormorant Garamond'; font-size: 1.8rem; margin-bottom: 12px;">Программа дня</h3>
-        <div class="timeline-item">
-          <div class="timeline-time">15:30 – 16:00</div>
-          <div class="timeline-desc">Встреча гостей, welcome-фуршет <span>легкие закуски, просекко</span></div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-time">16:00 – 16:45</div>
-          <div class="timeline-desc">Торжественная церемония <span>на открытой веранде в окружении сада</span></div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-time">17:00 – 18:30</div>
-          <div class="timeline-desc">Фотопрогулка и коктейльный час <span>живая музыка, фуршет</span></div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-time">18:30 – 23:00</div>
-          <div class="timeline-desc">Свадебный ужин, танцы и сюрпризы <span>праздничное застолье, шоу-программа</span></div>
-        </div>
-      </div>
-
-      <div class="dresscode">
-        <i class="fas fa-feather-alt"></i>
-        <h3 style="margin: 12px 0 6px;">Пастельные тона & элегантность</h3>
-        <p>Пожалуйста, поддержите нежную цветовую гамму нашей свадьбы: лавандовый, пудровый, шампань, мятный или нежно-розовый.</p>
-        <p style="margin-top: 12px;"><i class="fas fa-umbrella-beach"></i> Обувь на низком ходу — территория усадьбы с газонами</p>
-      </div>
-    </div>
-  </section>
-
-  <section style="background: #fcf8f5;">
-    <div class="container">
-      <div class="section-title">
-        <h2>Вдохновение моментом</h2>
-        <p>Атмосфера, которая будет окружать нас в этот день</p>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=600" alt="свадебный торт" loading="lazy">
-          <div class="img-caption">🎂 Десертный стол от шеф-кондитера</div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/1307679/pexels-photo-1307679.jpeg?auto=compress&cs=tinysrgb&w=600" alt="цветочная арка" loading="lazy">
-          <div class="img-caption">🌷 Церемониальная арка из пионов</div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/1151418/pexels-photo-1151418.jpeg?auto=compress&cs=tinysrgb&w=600" alt="музыканты" loading="lazy">
-          <div class="img-caption">🎻 Струнный квартет в течение вечера</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div id="personalMessageSection" style="display: none;">
-    <div class="container">
-      <div class="personal-message" id="personalMessageBox">
-        <i class="fas fa-envelope-open-text" style="font-size: 1.8rem; margin-bottom: 12px; opacity: 0.7; color: var(--rose);"></i>
-        <p id="personalMessageText" style="font-size: 1.05rem; font-style: italic;"></p>
-      </div>
+  <!-- Страница ошибки доступа (изначально скрыта) -->
+  <div id="errorPage" class="error-page" style="display: none;">
+    <div class="error-content">
+      <i class="fas fa-lock"></i>
+      <h1>Доступ ограничен</h1>
+      <p>Извините, это персональное приглашение. Проверьте ссылку или обратитесь к организаторам.</p>
+      <p style="font-size: 0.9rem;">Неверный или отсутствующий токен доступа.</p>
     </div>
   </div>
-
-  <section id="rsvp">
-    <div class="container">
-      <div class="section-title">
-        <h2>Подтвердите присутствие</h2>
-        <p id="rsvpInviteText">Пожалуйста, дайте ответ до 20 мая 2025, чтобы мы могли учесть все детали</p>
-      </div>
-      <div class="rsvp-form">
-        <form id="rsvpForm">
-          <div class="form-group">
-            <input type="text" id="name" placeholder="Ваше имя и фамилия *" required>
-          </div>
-          <div class="form-group">
-            <input type="email" id="email" placeholder="Email (для отправки напоминания)">
-          </div>
-          <div class="form-group">
-            <select id="attendance" required>
-              <option value="" disabled selected>Буду ли я на свадьбе? *</option>
-              <option value="yes">С радостью приду!</option>
-              <option value="no">К сожалению, не смогу</option>
-              <option value="plus">Приду с партнером/партнёршей</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <textarea rows="2" id="guestMessage" placeholder="Ваши пожелания, вопросы или диетические предпочтения"></textarea>
-          </div>
-          <button type="submit" class="btn-submit"><i class="fas fa-envelope"></i> Отправить RSVP</button>
-          <div class="rsvp-note">* Поля обязательные. Мы свяжемся для уточнения деталей.</div>
-        </form>
-        <div id="formStatus" style="margin-top: 20px; text-align:center; font-size:0.9rem; color:#b48c6c;"></div>
+  <div id="mainContent" class="main-content">
+    <div class="hero">
+      <img class="hero-bg" src="./assets/photos/IMG_2735.JPG" alt="свадебная атмосфера" loading="lazy">
+      <div class="hero-content">
+        <p>С любовью приглашаем вас</p>
+        <h1 id="guestNameDisplay"></h1>
+        <!-- <div id="guestNameDisplay" class="guest-name-highlight"></div> -->
+        <div class="hero-date"><i class="fas fa-calendar-alt" style="margin-right: 8px;"></i> 01 Августа 2026 · 16:00
+        </div>
+        <a href="#rsvp" class="btn-scroll"><i class="fas fa-arrow-down"></i> Подтвердить присутствие</a>
       </div>
     </div>
-  </section>
 
-  <section style="background: #fffcf8; padding: 40px 0;">
-    <div class="container" style="text-align: center;">
-      <i class="fas fa-heart" style="font-size: 2rem; color: var(--rose); opacity: 0.7;"></i>
-      <p style="max-width: 650px; margin: 20px auto 0; font-size: 1.1rem; font-style: italic;">"Любовь — это когда хочешь прожить всю жизнь с кем-то, кто каждый день делает твое сердце чуточку полнее." <br> С нетерпением ждём вас, чтобы разделить нашу радость!</p>
-      <p style="margin-top: 24px;">Анна & Дмитрий</p>
-    </div>
-  </section>
-</main>
+    <main>
+      <section id="about">
+        <div class="container">
+          <div class="section-title">
+            <h2>Наша история любви</h2>
+            <p id="storyGreeting">Две судьбы, которые переплелись в один прекрасный день, чтобы стать единым целым.</p>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="" alt="пара в парке" loading="lazy">
+              <div class="img-caption">🏐 Первая встреча</div>
+            </div>
+            <div class="gallery-item">
+              <img src="./assets/photos/букет.jpg" alt="прогулка вдвоем" loading="lazy">
+              <div class="img-caption">🌿 Первые намёки</div>
+            </div>
+            <div class="gallery-item">
+              <img src="./assets/photos/путешествие.jpg" alt="предложение руки и сердца" loading="lazy">
+              <div class="img-caption">✈️ Первое путешествие</div>
+            </div>
 
-<footer>
-  <div class="container">
-    <p><i class="far fa-copyright"></i> 2025 | Свадьба Анны и Дмитрия | С любовью и теплом</p>
-    <p style="margin-top: 8px; font-size: 0.75rem;">Все фотографии используются для создания вдохновения</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="details">
+        <div class="container">
+          <div class="section-title">
+            <h2>День торжества</h2>
+            <p>Присоединяйтесь к нам, чтобы разделить этот незабываемый день</p>
+          </div>
+          <div class="info-cards">
+            <div class="card"><i class="fas fa-map-marker-alt"></i>
+              <h3>Локация</h3>
+              <p>Ресторан "Reka"</p>
+              <p>​Отель Hilton Garden Inn Ufa Riverside. ​Улица Аксакова, 4</p>
+              <a href="https://yandex.ru/maps/-/CPfcQEjQ" target="_blank" class="address-link"><i
+                  class="fas fa-directions"></i> Открыть карту</a>
+            </div>
+            <div class="card"><i class="far fa-clock"></i>
+              <h3>Время</h3>
+              <p>Сбор гостей: 15:00</p>
+              <p>Церемония: 15:30</p>
+              <p>Банкет до 23:00</p>
+            </div>
+            <div class="card"><i class="fas fa-glass-cheers"></i>
+              <h3>Дресс-код</h3>
+              <p>Элегантный / Pastel tones</p>
+              <p>Пастельные оттенки, цветочные акценты</p>
+            </div>
+          </div>
+          <div class="timeline">
+            <h3 style="text-align:center; font-family: 'Cormorant Garamond'; font-size: 1.8rem; margin-bottom: 12px;">
+              Программа дня</h3>
+            <div class="timeline-item">
+              <div class="timeline-time">  15:00 – 16:00</div>
+              <div class="timeline-desc">Встреча гостей<span>легкие закуски, игристое</span></div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">16:00 – 22:00</div>
+              <div class="timeline-desc">Банкетная церемеония<span>с энергичным ведущим</span></div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">22:00 – 23:00</div>
+              <div class="timeline-desc">Неформальная обстановка<span>Танцы и веселье</span></div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">23:00 – </div>
+              <div class="timeline-desc">Завершение мероприятия<span>Разъезд гостей</span></div>
+            </div>
+          </div>
+          <div class="dresscode"><i class="fas fa-feather-alt"></i>
+            <h3 style="margin: 12px 0 6px;">Пастельные тона & элегантность</h3>
+            <p>Лавандовый, пудровый, шампань, мятный или нежно-розовый.</p>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="./assets/photos/мы.jpg" alt="цветы и нежность" loading="lazy">
+              <div class="img-caption">🌸 Любовь в мелочах, 2024</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://images.pexels.com/photos/1307679/pexels-photo-1307679.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="цветочная арка" loading="lazy">
+              <div class="img-caption">🌷 Церемониальная арка из пионов</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://images.pexels.com/photos/1151418/pexels-photo-1151418.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="музыканты" loading="lazy">
+              <div class="img-caption">🎻 Струнный квартет в течение вечера</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <div id="personalMessageSection" style="display: none;">
+        <div class="container">
+          <div class="personal-message"><i class="fas fa-envelope-open-text"
+              style="font-size: 1.8rem; margin-bottom: 12px; color: var(--rose);"></i>
+            <p id="personalMessageText" style="font-size: 1.05rem; font-style: italic;"></p>
+          </div>
+        </div>
+      </div>
+
+      <section id="rsvp">
+        <div class="container">
+          <div class="section-title">
+            <h2>Подтвердите присутствие</h2>
+            <p id="rsvpInviteText">Пожалуйста, дайте ответ до 20 мая 2025</p>
+          </div>
+          <div class="rsvp-form">
+            <form id="rsvpForm" method="POST" action="save_rsvp.php">
+              <div class="form-group"><input type="text" id="guest_name" name="guest_name"
+                  placeholder="Ваше имя и фамилия *" required></div>
+              <div class="form-group"><input type="email" id="email" name="email" placeholder="Email"></div>
+              <div class="form-group">
+                <select id="attendance" name="attendance" required>
+                  <option value="" disabled selected>Буду ли я на свадьбе? *</option>
+                  <option value="yes">С радостью приду!</option>
+                  <option value="no">К сожалению, не смогу</option>
+                  <option value="plus">Приду с партнером/партнёршей</option>
+                </select>
+              </div>
+              <div class="form-group"><textarea rows="2" id="wishes" name="wishes"
+                  placeholder="Ваши пожелания, вопросы или диетические предпочтения"></textarea></div>
+              <input type="hidden" id="invited_as" name="invited_as" value="">
+              <input type="hidden" id="personal_message" name="personal_message" value="">
+              <button type="submit" class="btn-submit" id="submitBtn"><i class="fas fa-envelope"></i> Отправить
+                RSVP</button>
+              <div class="rsvp-note">* Поля обязательные.</div>
+            </form>
+            <div id="formStatus" style="margin-top: 20px; text-align:center; font-size:0.9rem;"></div>
+          </div>
+        </div>
+      </section>
+
+      <section style="background: #fffcf8; padding: 40px 0;">
+        <div class="container" style="text-align: center;"><i class="fas fa-heart"
+            style="font-size: 2rem; color: var(--rose); opacity: 0.7;"></i>
+          <p style="max-width: 650px; margin: 20px auto 0; font-size: 1.1rem; font-style: italic;">С нетерпением ждём
+            вас,
+            чтобы разделить нашу радость!</p>
+          <p style="margin-top: 24px;">Владислава & Дмитрий</p>
+        </div>
+      </section>
   </div>
-</footer>
+  </main>
+  <footer>
+    <div class="container">
+      <p><i class="far fa-copyright"></i> 2026 | Свадьба Владиславы и Дмитрия | С любовью и теплом</p>
+    </div>
+  </footer>
 
-<script>
-  // ===================== ПАРСИНГ ПАРАМЕТРОВ ИЗ URL =====================
-  function getUrlParameters() {
-    const params = new URLSearchParams(window.location.search);
-    return {
-      name: params.get('name'),
-      message: params.get('message'),
-      guest: params.get('guest'),
-    };
-  }
-
-  function decodeHTMLEntities(str) {
-    if (!str) return str;
-    const textarea = document.createElement('textarea');
-    textarea.innerHTML = str;
-    return textarea.value;
-  }
-
-  function applyGuestParameters() {
+  <script>
+    
+    const VALID_TOKEN = 'mySecretWedding2025';  
+    function getUrlParameters() {
+      const params = new URLSearchParams(window.location.search);
+      return { name: params.get('name'), message: params.get('message'), guest: params.get('guest'), token: params.get('token') };
+    }
+    // Функция проверки токена
+  function isTokenValid() {
     const params = getUrlParameters();
+    const userToken = params.token;
     
-    let guestName = params.name;
-    if (guestName) {
-      guestName = decodeURIComponent(guestName);
-      guestName = decodeHTMLEntities(guestName);
-      
-      const nameDisplay = document.getElementById('guestNameDisplay');
-      if (nameDisplay) {
-        nameDisplay.innerHTML = `<i class="fas fa-star-of-life" style="font-size: 0.9rem;"></i> ${guestName} <i class="fas fa-star-of-life" style="font-size: 0.9rem;"></i>`;
-      }
-      
-      const storyGreeting = document.getElementById('storyGreeting');
-      if (storyGreeting) {
-        storyGreeting.innerHTML = `Дорогой(ая) ${guestName}, мы рады, что вы станете частью нашей истории. Две судьбы, которые переплелись, чтобы стать единым целым.`;
-      }
-      
-      const rsvpText = document.getElementById('rsvpInviteText');
-      if (rsvpText) {
-        rsvpText.innerHTML = `${guestName}, пожалуйста, дайте ответ до 20 мая 2025, чтобы мы могли учесть все детали.`;
-      }
-      
-      const nameInput = document.getElementById('name');
-      if (nameInput) {
-        nameInput.value = guestName;
-      }
+    // Вариант 1: один токен
+    if (userToken === VALID_TOKEN) {
+      return true;
+    }
+    
+    return false;
+  }
+
+  // Проверяем токен при загрузке страницы
+
+  function checkAccess() {
+    
+    const isValid = isTokenValid();
+    const errorPage = document.getElementById('errorPage');
+    const mainContent = document.getElementById('mainContent');
+    
+    if (!isValid) {
+      // Показываем страницу ошибки, скрываем основной контент
+      console.log(isValid);
+      errorPage.style.display = 'flex';
+      mainContent.classList.add('hidden');
+      mainContent.style.display = 'none';
+      return false;
     } else {
-      const nameDisplay = document.getElementById('guestNameDisplay');
-      if (nameDisplay) {
-        nameDisplay.style.display = 'none';
-      }
-    }
-    
-    let personalMessage = params.message;
-    if (personalMessage) {
-      personalMessage = decodeURIComponent(personalMessage);
-      personalMessage = decodeHTMLEntities(personalMessage);
-      
-      const messageSection = document.getElementById('personalMessageSection');
-      const messageText = document.getElementById('personalMessageText');
-      
-      if (messageSection && messageText && personalMessage.trim() !== '') {
-        messageText.innerHTML = `«${personalMessage}»`;
-        messageSection.style.display = 'block';
-      }
-    }
-    
-    const guestCount = params.guest;
-    if (guestCount) {
-      const decodedGuest = decodeURIComponent(guestCount);
-      const dresscodeBlock = document.querySelector('.dresscode');
-      if (dresscodeBlock && decodedGuest && !document.getElementById('guestCountBadge')) {
-        const badge = document.createElement('div');
-        badge.id = 'guestCountBadge';
-        badge.style.marginTop = '16px';
-        badge.style.fontSize = '0.9rem';
-        badge.style.fontWeight = '500';
-        badge.style.background = 'rgba(219, 183, 176, 0.2)';
-        badge.style.padding = '8px 16px';
-        badge.style.borderRadius = '40px';
-        badge.style.display = 'inline-block';
-        badge.innerHTML = `<i class="fas fa-users"></i> Приглашено: ${decodedGuest} ${decodedGuest === '1' ? 'гость' : (decodedGuest < 5 ? 'гостя' : 'гостей')}`;
-        dresscodeBlock.appendChild(badge);
-      }
+      // Всё хорошо, показываем страницу
+      errorPage.style.display = 'none';
+      mainContent.classList.remove('hidden');
+      mainContent.style.display = 'block';
+      return true;
     }
   }
 
+    function decodeHTMLEntities(str) {
+      if (!str) return str;
+      const textarea = document.createElement('textarea');
+      textarea.innerHTML = str;
+      return textarea.value;
+    }
+
+    function applyGuestParameters() {
+      const params = getUrlParameters();
+      let guestName = params.name;
+      if (guestName) {
+        guestName = decodeURIComponent(guestName);
+        guestName = decodeHTMLEntities(guestName);
+        document.getElementById('guestNameDisplay').innerHTML = `<i style="font-size: 0.9rem;"></i> ${guestName} <i style="font-size: 0.9rem;"></i>`;
+        document.getElementById('storyGreeting').innerHTML = `Дорогой(ая) ${guestName}, мы рады, что вы станете частью нашей истории.`;
+        document.getElementById('rsvpInviteText').innerHTML = `${guestName}, пожалуйста, дайте ответ до 20 мая 2025.`;
+        document.getElementById('guest_name').value = guestName;
+        document.getElementById('invited_as').value = guestName;
+      }
+      let personalMessage = params.message;
+      if (personalMessage) {
+        personalMessage = decodeURIComponent(personalMessage);
+        personalMessage = decodeHTMLEntities(personalMessage);
+        if (personalMessage.trim() !== '') {
+          document.getElementById('personalMessageText').innerHTML = `«${personalMessage}»`;
+          document.getElementById('personalMessageSection').style.display = 'block';
+          document.getElementById('personal_message').value = personalMessage;
+        }
+      }
+    }
+      // Запускаем проверку доступа ПЕРВОЙ
+  // const accessGranted = checkAccess();
+  // console.log(accessGranted);
+  // // Если доступ разрешён — применяем параметры гостя
+  // if (accessGranted) {
+  //   applyGuestParameters();
+  // }
   applyGuestParameters();
 
-  // ===================== RSVP FORM =====================
-  const rsvpForm = document.getElementById('rsvpForm');
-  const statusDiv = document.getElementById('formStatus');
+    // AJAX отправка без перезагрузки страницы
+    const rsvpForm = document.getElementById('rsvpForm');
+    const statusDiv = document.getElementById('formStatus');
+    const submitBtn = document.getElementById('submitBtn');
 
-  if (rsvpForm) {
-    rsvpForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const nameInput = document.getElementById('name');
-      const attendanceSelect = document.getElementById('attendance');
-      const name = nameInput.value.trim();
-      const attendance = attendanceSelect.value;
-
-      if (!name) {
-        statusDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> Пожалуйста, укажите ваше имя.';
-        statusDiv.style.color = '#b48c6c';
-        return;
-      }
-      if (!attendance) {
-        statusDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> Выберите вариант присутствия.';
-        statusDiv.style.color = '#b48c6c';
-        return;
-      }
-
-      statusDiv.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Отправляем ваше подтверждение...';
-      setTimeout(() => {
-        let answerText = '';
-        if (attendance === 'yes') answerText = 'будете на свадьбе! 🥂';
-        else if (attendance === 'no') answerText = 'не сможете присутствовать, мы будем скучать 💌';
-        else answerText = 'придёте с партнёром/партнёршей! 💑';
-        statusDiv.innerHTML = `<i class="fas fa-check-circle"></i> Спасибо, ${name}! Вы ${answerText} Мы свяжемся с вами в ближайшее время.`;
-        statusDiv.style.color = '#7d9b6e';
-        rsvpForm.reset();
-        
-        const params = getUrlParameters();
-        if (params.name) {
-          const restoredName = decodeURIComponent(params.name);
-          document.getElementById('name').value = restoredName;
-        }
-        
-        setTimeout(() => {
-          statusDiv.innerHTML = '';
-        }, 6000);
-      }, 800);
-    });
-  }
-
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href === "#" || href === "") return;
-      const target = document.querySelector(href);
-      if (target) {
+    if (rsvpForm) {
+      rsvpForm.addEventListener('submit', async function (e) {
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
-</script>
 
+        const formData = new FormData(rsvpForm);
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Отправка...';
+        statusDiv.innerHTML = '';
+
+        try {
+          const response = await fetch('save_rsvp.php', {
+            method: 'POST',
+            body: formData
+          });
+          const result = await response.json();
+
+          if (result.success) {
+            statusDiv.innerHTML = `<i class="fas fa-check-circle"></i> ${result.message}`;
+            statusDiv.style.color = '#7d9b6e';
+            rsvpForm.reset();
+            const params = getUrlParameters();
+            if (params.name) {
+              document.getElementById('guest_name').value = decodeURIComponent(params.name);
+              document.getElementById('invited_as').value = decodeURIComponent(params.name);
+            }
+            if (params.message) {
+              document.getElementById('personal_message').value = decodeURIComponent(params.message);
+            }
+          } else {
+            statusDiv.innerHTML = `<i class="fas fa-exclamation-circle"></i> ${result.message}`;
+            statusDiv.style.color = '#b48c6c';
+          }
+        } catch (error) {
+          statusDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> Ошибка соединения. Попробуйте позже.';
+          statusDiv.style.color = '#b48c6c';
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i class="fas fa-envelope"></i> Отправить RSVP';
+          setTimeout(() => { if (statusDiv.innerHTML) statusDiv.innerHTML = ''; }, 5000);
+        }
+      });
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === "#" || href === "") return;
+        const target = document.querySelector(href);
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  </script>
 </body>
+
 </html>
