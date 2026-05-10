@@ -617,7 +617,7 @@
 
   <script>
 
-    const VALID_TOKEN = 'mySecretWedding2025';
+    const VALID_TOKEN = 'DimaVladaSecret2026';
     function getUrlParameters() {
       const params = new URLSearchParams(window.location.search);
       return { name: params.get('name'), message: params.get('message'), guest: params.get('guest'), token: params.get('token') };
@@ -690,13 +690,13 @@
       }
     }
     // Запускаем проверку доступа ПЕРВОЙ
-    // const accessGranted = checkAccess();
-    // console.log(accessGranted);
-    // // Если доступ разрешён — применяем параметры гостя
-    // if (accessGranted) {
-    //   applyGuestParameters();
-    // }
-    applyGuestParameters();
+    const accessGranted = checkAccess();
+    console.log(accessGranted);
+    // Если доступ разрешён — применяем параметры гостя
+    if (accessGranted) {
+      applyGuestParameters();
+    }
+    // applyGuestParameters();
 
     // AJAX отправка без перезагрузки страницы
     const rsvpForm = document.getElementById('rsvpForm');
