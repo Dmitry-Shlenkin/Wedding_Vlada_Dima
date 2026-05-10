@@ -714,7 +714,7 @@
         statusDiv.innerHTML = '';
 
         try {
-          const response = await fetch('save_rsvp.php', {
+          const response = await fetch('https://podogrev-online.ru/v1/save_rsvp.php', {
             method: 'POST',
             body: formData
           });
